@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>My Account - Yellow Cicy</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <style>
+
+        /* =================================================
+           YELLOW CICY CUSTOMER ACCOUNT
+        ================================================= */
+
+        .customer-account {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px 15px 90px;
+        }
+
+
+        /* SEARCH */
+
+        .account-search {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .account-search input {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 13px 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 15px;
+            outline: none;
+        }
+
+
+        /* ACCOUNT HEADER */
+
+        .account-welcome {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+        }
+
+        .account-welcome h1 {
+            margin: 0 0 8px;
+            font-size: 23px;
+        }
+
+        .account-welcome p {
+            margin: 5px 0;
+            color: #666;
+            font-size: 14px;
+        }
+
+
+        /* QUICK ACTIONS */
+
+        .account-quick-actions {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .account-quick-card {
+            display: block;
+            background: white;
+            padding: 16px 12px;
+            border-radius: 9px;
+            text-align: center;
+            text-decoration: none;
+            color: #111;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+        }
+
+        .account-quick-card .icon {
+            display: block;
+            font-size: 24px;
+            margin-bottom: 6px;
+        }
+
+        .account-quick-card strong {
+            font-size: 14px;
+        }
+
+
+        /* SECTION */
+
+        .account-section {
+            background: white;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+        }
+
+        .account-section-title {
+            padding: 16px;
+            margin: 0;
+            font-size: 18px;
+            border-bottom: 1px solid #eee;
+        }
+
+
+        /* ACCOUNT MENU */
+
+        .account-menu {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .account-menu a,
+        .account-menu button {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            min-height: 58px;
+            padding: 12px 15px;
+            background: white;
+            border: none;
+            border-bottom: 1px solid #eee;
+            color: #222;
+            text-decoration: none;
+            text-align: left;
+            font-size: 14px;
+            cursor: pointer;
+            box-sizing: border-box;
+        }
+
+        .account-menu a:nth-child(odd),
+        .account-menu button:nth-child(odd) {
+            border-right: 1px solid #eee;
+        }
+
+        .account-menu .menu-icon {
+            font-size: 21px;
+            min-width: 25px;
+            text-align: center;
+        }
+
+
+        /* SUPPORT */
+
+        .account-support {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            padding: 15px;
+        }
+
+        .account-support a,
+        .account-support button {
+            padding: 11px 10px;
+            border: none;
+            border-radius: 7px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 13px;
+            cursor: pointer;
+        }
+
+        .whatsapp-support {
+            background: #25D366;
+            color: white;
+        }
+
+        .call-support {
+            background: #111;
+            color: white;
+        }
+
+
+        /* DESKTOP */
+
+        @media (min-width: 769px) {
+
+            .customer-account {
+                padding-top: 30px;
+            }
+
+            .account-quick-actions {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .account-menu {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .account-menu a:nth-child(odd),
+            .account-menu button:nth-child(odd) {
+                border-right: none;
+            }
+
+            .account-menu a:not(:nth-child(4n)),
+            .account-menu button:not(:nth-child(4n)) {
+                border-right: 1px solid #eee;
+            }
+
+            .account-support {
+                grid-template-columns: repeat(2, 220px);
+                justify-content: center;
+            }
+
+        }
+
+
+        /* VERY SMALL PHONES */
+
+        @media (max-width: 400px) {
+
+            .customer-account {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .account-welcome {
+                padding: 15px;
+            }
+
+            .account-menu {
+                grid-template-columns: 1fr;
+            }
+
+            .account-menu a:nth-child(odd),
+            .account-menu button:nth-child(odd) {
+                border-right: none;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <div class="container">
+
+        <div class="logo">
+
+            <a href="index.html">
+
+                <img
+                    src="images/logo.png"
+                    alt="Yellow Cicy"
+                >
+
+            </a>
+
+            <h1>
+                Yellow Cicy
+            </h1>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<nav>
+
+    <ul>
+
+        <li>
+            <a href="index.html">
+                Home
+            </a>
+        </li>
+
+        <li>
+            <a href="index.html#products">
+                Shop
+            </a>
+        </li>
+
+        <li>
+            <a href="index.html#categories">
+                Categories
+            </a>
+        </li>
+
+        <li>
+            <a href="wishlist.html">
+                Wishlist
+            </a>
+        </li>
+
+        <li>
+            <a href="cart.html">
+                Cart
+            </a>
+        </li>
+
+        <li>
+            <a href="account.html">
+                Account
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+<main class="customer-account">
+        <!-- =================================================
+         WELCOME
+    ================================================= -->
+
+    <section class="account-welcome">
+
+        <h1 id="customer-name">
+            Welcome to Yellow Cicy
+        </h1>
+
+        <p id="customer-email">
+            Checking your account...
+        </p>
+
+    </section>
+
+
+    <!-- =================================================
+         QUICK ACTIONS
+    ================================================= -->
+
+    <div class="account-quick-actions">
+
+        <a
+            href="my-orders.html"
+            class="account-quick-card"
+        >
+            <span class="icon">📦</span>
+            <strong>My Orders</strong>
+        </a>
+
+
+        <a
+            href="wishlist.html"
+            class="account-quick-card"
+        >
+            <span class="icon">❤️</span>
+            <strong>Wishlist</strong>
+        </a>
+
+
+        <a
+            href="index.html#products"
+            class="account-quick-card"
+        >
+            <span class="icon">🛍️</span>
+            <strong>Shop Now</strong>
+        </a>
+
+
+        <a
+            href="#help-support"
+            class="account-quick-card"
+        >
+            <span class="icon">💬</span>
+            <strong>Help & Support</strong>
+        </a>
+
+    </div>
+
+
+    <!-- =================================================
+         MY YELLOW CICY ACCOUNT
+    ================================================= -->
+
+    <section class="account-section">
+
+        <h2 class="account-section-title">
+            My Yellow Cicy Account
+        </h2>
+
+
+        <div class="account-menu">
+
+            <a href="my-orders.html">
+
+                <span class="menu-icon">
+                    📦
+                </span>
+
+                <span>
+                    Orders
+                </span>
+
+            </a>
+
+
+            <a href="#inbox">
+
+                <span class="menu-icon">
+                    📥
+                </span>
+
+                <span>
+                    Inbox
+                </span>
+
+            </a>
+
+
+            <a href="#reviews">
+
+                <span class="menu-icon">
+                    ⭐
+                </span>
+
+                <span>
+                    Ratings & Reviews
+                </span>
+
+            </a>
+
+
+            <a href="#vouchers">
+
+                <span class="menu-icon">
+                    🎟️
+                </span>
+
+                <span>
+                    Vouchers
+                </span>
+
+            </a>
+
+
+            <a href="wishlist.html">
+
+                <span class="menu-icon">
+                    ❤️
+                </span>
+
+                <span>
+                    Wishlist
+                </span>
+
+            </a>
+
+
+            <a href="#follow">
+
+                <span class="menu-icon">
+                    🏪
+                </span>
+
+                <span>
+                    Follow Yellow Cicy
+                </span>
+
+            </a>
+
+
+            <a href="#recently-viewed">
+
+                <span class="menu-icon">
+                    🕘
+                </span>
+
+                <span>
+                    Recently Viewed
+                </span>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         MY SETTINGS
+    ================================================= -->
+
+    <section class="account-section">
+
+        <h2 class="account-section-title">
+            My Settings
+        </h2>
+
+
+        <div class="account-menu">
+
+            <a href="address-book.html">
+
+                <span class="menu-icon">
+                    📍
+                </span>
+
+                <span>
+                    Address Book
+                </span>
+
+            </a>
+
+
+            <a href="account-settings.html">
+
+                <span class="menu-icon">
+                    ⚙️
+                </span>
+
+                <span>
+                    Account Management
+                </span>
+
+            </a>
+
+
+            <a href="#notifications">
+
+                <span class="menu-icon">
+                    🔔
+                </span>
+
+                <span>
+                    Notification Preferences
+                </span>
+
+            </a>
+
+
+            <a href="#privacy">
+
+                <span class="menu-icon">
+                    🔒
+                </span>
+
+                <span>
+                    Privacy Policy
+                </span>
+
+            </a>
+
+
+            <button
+                type="button"
+                id="logout-btn"
+            >
+
+                <span class="menu-icon">
+                    🚪
+                </span>
+
+                <span>
+                    Logout
+                </span>
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         HELP & SUPPORT
+    ================================================= -->
+
+    <section
+        class="account-section"
+        id="help-support"
+    >
+
+        <h2 class="account-section-title">
+            Help & Support
+        </h2>
+
+
+        <div class="account-support">
+
+            <a
+                href="https://wa.me/233597131974?text=Hello%20Yellow%20Cicy%2C%20I%20need%20help."
+                target="_blank"
+                rel="noopener"
+                class="whatsapp-support"
+            >
+                💬 WhatsApp
+            </a>
+
+
+            <button
+                type="button"
+                id="support-call-btn"
+                class="call-support"
+            >
+                📞 Call Support
+            </button>
+
+        </div>
+
+    </section>
+        <!-- =================================================
+         ACCOUNT FOOTER MESSAGE
+    ================================================= -->
+
+    <div
+        style="
+            text-align:center;
+            padding:15px 10px;
+            color:#777;
+            font-size:13px;
+        "
+    >
+        <p style="margin:0;">
+            Thank you for shopping with Yellow Cicy.
+        </p>
+    </div>
+
+
+</main>
+
+
+<!-- =====================================================
+     BOTTOM NAVIGATION
+===================================================== -->
+
+<nav
+    class="customer-bottom-nav"
+    aria-label="Customer navigation"
+    style="
+        position:fixed;
+        left:0;
+        right:0;
+        bottom:0;
+        z-index:1000;
+        background:white;
+        border-top:1px solid #ddd;
+        box-shadow:0 -2px 10px rgba(0,0,0,0.08);
+    "
+>
+
+    <div
+        style="
+            max-width:700px;
+            margin:0 auto;
+            display:grid;
+            grid-template-columns:repeat(5,1fr);
+        "
+    >
+
+        <a
+            href="index.html"
+            style="
+                display:flex;
+                flex-direction:column;
+                align-items:center;
+                justify-content:center;
+                min-height:58px;
+                text-decoration:none;
+                color:#333;
+                font-size:12px;
+                gap:3px;
+            "
+        >
+
+            <span style="font-size:20px;">
+                🏠
+            </span>
+
+            <span>
+                Home
+            </span>
+
+        </a>
+
+
+        <a
+            href="index.html#categories"
+            style="
+                display:flex;
+                flex-direction:column;
+                align-items:center;
+                justify-content:center;
+                min-height:58px;
+                text-decoration:none;
+                color:#333;
+                font-size:12px;
+                gap:3px;
+            "
+        >
+
+            <span style="font-size:20px;">
+                ☰
+            </span>
+
+            <span>
+                Categories
+            </span>
+
+        </a>
+
+
+        <a
+            href="cart.html"
+            style="
+                display:flex;
+                flex-direction:column;
+                align-items:center;
+                justify-content:center;
+                min-height:58px;
+                text-decoration:none;
+                color:#333;
+                font-size:12px;
+                gap:3px;
+            "
+        >
+
+            <span style="font-size:20px;">
+                🛒
+            </span>
+
+            <span>
+                Cart
+            </span>
+
+        </a>
+
+
+        <a
+            href="wishlist.html"
+            style="
+                display:flex;
+                flex-direction:column;
+                align-items:center;
+                justify-content:center;
+                min-height:58px;
+                text-decoration:none;
+                color:#333;
+                font-size:12px;
+                gap:3px;
+            "
+        >
+
+            <span style="font-size:20px;">
+                ❤️
+            </span>
+
+            <span>
+                Wishlist
+            </span>
+
+        </a>
+
+
+        <a
+            href="account.html"
+            style="
+                display:flex;
+                flex-direction:column;
+                align-items:center;
+                justify-content:center;
+                min-height:58px;
+                text-decoration:none;
+                color:#111;
+                font-weight:bold;
+                font-size:12px;
+                gap:3px;
+            "
+        >
+
+            <span style="font-size:20px;">
+                👤
+            </span>
+
+            <span>
+                Account
+            </span>
+
+        </a>
+
+    </div>
+
+</nav>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer
+    style="
+        padding:25px 15px 85px;
+        text-align:center;
+    "
+>
+
+    <p>
+        © 2026 Yellow Cicy. All rights reserved.
+    </p>
+
+</footer>
+
+
+<!-- =====================================================
+     ACCOUNT JAVASCRIPT
+===================================================== -->
+
+<script
+    type="module"
+    src="js/account.js"
+></script>
+
+
+</body>
+
+</html>

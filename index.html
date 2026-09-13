@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Yellow Cicy - Online Shopping</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+    <div class="container">
+
+        <div class="logo">
+
+            <a href="index.html">
+
+                <img
+                    src="images/logo.png"
+                    alt="Yellow Cicy"
+                >
+
+            </a>
+
+            <h1>
+                Yellow Cicy
+            </h1>
+
+        </div>
+
+
+        <!-- SEARCH -->
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="search"
+                placeholder="Search products..."
+                autocomplete="off"
+            >
+
+            <button
+                type="button"
+                id="search-btn"
+                aria-label="Search"
+            >
+                🔍
+            </button>
+
+        </div>
+
+
+        <!-- HEADER ICONS -->
+
+        <div class="header-icons">
+
+            <a
+                href="wishlist.html"
+                aria-label="Wishlist"
+                title="Wishlist"
+            >
+                ❤️
+            </a>
+
+
+            <a
+                href="cart.html"
+                aria-label="Shopping Cart"
+                title="Shopping Cart"
+            >
+                🛒
+            </a>
+
+
+            <a
+                href="account.html"
+                aria-label="Account"
+                title="My Account"
+            >
+                👤
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+
+    <ul>
+
+        <li>
+            <a href="index.html">
+                Home
+            </a>
+        </li>
+
+
+        <li>
+            <a href="#products">
+                Shop
+            </a>
+        </li>
+
+
+        <li>
+            <a href="#categories">
+                Categories
+            </a>
+        </li>
+
+
+        <li>
+            <a href="wishlist.html">
+                Wishlist
+            </a>
+        </li>
+
+
+        <li>
+            <a href="cart.html">
+                Cart
+            </a>
+        </li>
+
+
+        <li>
+            <a href="account.html">
+                Account
+            </a>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+
+    </ul>
+
+</nav>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+    <h1>
+        Everything You Need In One Place
+    </h1>
+
+
+    <p>
+        Electronics • Fashion • Furniture • Home Appliances
+    </p>
+
+
+    <a
+        class="hero-button"
+        href="#products"
+    >
+        Shop Now
+    </a>
+
+</section>
+
+
+<!-- =========================
+     CATEGORIES
+========================= -->
+
+<section
+    class="categories"
+    id="categories"
+>
+
+    <h2>
+        Shop By Category
+    </h2>
+
+
+    <div class="category-layout">
+
+
+        <!-- =====================
+             CATEGORY SIDEBAR
+        ====================== -->
+
+        <aside class="category-sidebar">
+
+            <div class="category-sidebar-title">
+                Categories
+            </div>
+
+
+            <div
+                id="category-list"
+                class="category-list"
+            >
+
+                <button
+                    type="button"
+                    class="category-btn active"
+                    data-category="All"
+                >
+                    🛍️ All Products
+                </button>
+
+
+                <button
+                    type="button"
+                    class="category-btn"
+                    data-category="Electronics"
+                >
+                    📱 Electronics
+                </button>
+
+
+                <button
+                    type="button"
+                    class="category-btn"
+                    data-category="Health & Beauty"
+                >
+                    💄 Health & Beauty
+                </button>
+
+
+                <button
+                    type="button"
+                    class="category-btn"
+                    data-category="Home & Office"
+                >
+                    🏠 Home & Office
+                </button>
+
+
+                <button
+                    type="button"
+                    class="category-btn"
+                    data-category="Computing"
+                >
+                    💻 Computing
+                </button>
+
+
+                <button
+                    type="button"
+                    class="category-btn"
+                    data-category="Baby Products"
+                >
+                    👶 Baby Products
+                </button>
+
+
+                <button
+                    type="button"
+                    class="category-btn"
+                    data-category="Fashion"
+                >
+                    👕 Fashion
+                </button>
+
+
+                <button
+                    type="button"
+                    class="category-btn"
+                    data-category="Gaming"
+                >
+                    🎮 Gaming
+                </button>
+
+
+                <button
+                    type="button"
+                    class="category-btn"
+                    data-category="Musical Instruments"
+                >
+                    🎵 Musical Instruments
+                </button>
+
+
+                <button
+                    type="button"
+                    class="category-btn"
+                    data-category="Sporting Goods"
+                >
+                    ⚽ Sporting Goods
+                </button>
+
+
+                <button
+                    type="button"
+                    class="category-btn"
+                    data-category="Furniture"
+                >
+                    🪑 Furniture
+                </button>
+
+
+                <button
+                    type="button"
+                    class="category-btn"
+                    data-category="Phones"
+                >
+                    📱 Phones
+                </button>
+
+
+                <button
+                    type="button"
+                    class="category-btn"
+                    data-category="Accessories"
+                >
+                    🎒 Accessories
+                </button>
+
+
+                <button
+                    type="button"
+                    class="category-btn"
+                    data-category="Watches"
+                >
+                    ⌚ Watches
+                </button>
+
+
+                <button
+                    type="button"
+                    class="category-btn"
+                    data-category="Other"
+                >
+                    📦 Other
+                </button>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =====================
+             CATEGORY PRODUCTS
+        ====================== -->
+
+        <div class="category-products">
+
+            <div class="category-products-header">
+
+                <h3 id="category-products-title">
+                    Products
+                </h3>
+
+
+                <span id="category-products-count">
+                    Choose a category
+                </span>
+
+            </div>
+
+
+            <div
+                id="product-grid"
+                class="product-grid"
+            >
+
+                <p>
+                    Loading products...
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PRODUCTS ANCHOR
+========================= -->
+
+<section
+    class="products"
+    id="products"
+>
+
+    <h2>
+        Featured Products
+    </h2>
+
+</section>
+
+
+<!-- =====================================================
+     HELP & SUPPORT
+===================================================== -->
+
+<section
+    id="help-support"
+    style="
+        padding:25px 15px;
+        background:#f8f8f8;
+    "
+>
+
+    <div
+        style="
+            max-width:750px;
+            margin:0 auto;
+        "
+    >
+
+        <h2
+            style="
+                text-align:center;
+                margin:0 0 6px;
+                font-size:22px;
+            "
+        >
+            Help & Support
+        </h2>
+
+        <p
+            style="
+                text-align:center;
+                color:#666;
+                margin:0 0 18px;
+                line-height:1.4;
+                font-size:14px;
+            "
+        >
+            Need help with your order or shopping?
+            We're here to help.
+        </p>
+
+
+        <!-- FAQ 1 -->
+
+        <div
+            style="
+                background:white;
+                padding:14px 16px;
+                margin-bottom:10px;
+                border-radius:8px;
+                box-shadow:0 1px 5px rgba(0,0,0,0.07);
+            "
+        >
+
+            <h3 style="margin:0 0 6px; font-size:16px;">
+                🛒 How do I place an order?
+            </h3>
+
+            <p
+                style="
+                    color:#666;
+                    line-height:1.45;
+                    margin:0;
+                    font-size:14px;
+                "
+            >
+                Browse our products, choose the product
+                you want, select the available options
+                such as size or color, and add it to your
+                cart. Then proceed to checkout and complete
+                your payment.
+            </p>
+
+        </div>
+
+
+        <!-- FAQ 2 -->
+
+        <div
+            style="
+                background:white;
+                padding:14px 16px;
+                margin-bottom:10px;
+                border-radius:8px;
+                box-shadow:0 1px 5px rgba(0,0,0,0.07);
+            "
+        >
+
+            <h3 style="margin:0 0 6px; font-size:16px;">
+                💳 How can I pay?
+            </h3>
+
+            <p
+                style="
+                    color:#666;
+                    line-height:1.45;
+                    margin:0;
+                    font-size:14px;
+                "
+            >
+                Payments are handled securely through
+                Paystack during checkout.
+            </p>
+
+        </div>
+
+
+        <!-- FAQ 3 -->
+
+        <div
+            style="
+                background:white;
+                padding:14px 16px;
+                margin-bottom:10px;
+                border-radius:8px;
+                box-shadow:0 1px 5px rgba(0,0,0,0.07);
+            "
+        >
+
+            <h3 style="margin:0 0 6px; font-size:16px;">
+                💬 How can I contact Yellow Cicy?
+            </h3>
+
+            <p
+                style="
+                    color:#666;
+                    line-height:1.45;
+                    margin:0;
+                    font-size:14px;
+            "
+            >
+                You can contact us through WhatsApp or
+                call our support line.
+            </p>
+
+        </div>
+                <!-- FAQ 4 -->
+
+        <div
+            style="
+                background:white;
+                padding:14px 16px;
+                margin-bottom:10px;
+                border-radius:8px;
+                box-shadow:0 1px 5px rgba(0,0,0,0.07);
+            "
+        >
+
+            <h3 style="margin:0 0 6px; font-size:16px;">
+                📦 What happens after I place an order?
+            </h3>
+
+            <p
+                style="
+                    color:#666;
+                    line-height:1.45;
+                    margin:0;
+                    font-size:14px;
+                "
+            >
+                Your order is processed and prepared for
+                delivery to your selected pickup station.
+                You will receive updates as your order
+                progresses.
+            </p>
+
+        </div>
+
+
+        <!-- FAQ 5 -->
+
+        <div
+            style="
+                background:white;
+                padding:14px 16px;
+                margin-bottom:18px;
+                border-radius:8px;
+                box-shadow:0 1px 5px rgba(0,0,0,0.07);
+            "
+        >
+
+            <h3 style="margin:0 0 6px; font-size:16px;">
+                ❌ Can I cancel my order?
+            </h3>
+
+            <p
+                style="
+                    color:#666;
+                    line-height:1.45;
+                    margin:0;
+                    font-size:14px;
+                "
+            >
+                Orders can be cancelled when they are still
+                within the cancellation period and have not
+                reached a stage where cancellation is no
+                longer available.
+            </p>
+
+        </div>
+
+
+        <!-- SUPPORT BUTTONS -->
+
+        <div
+            style="
+                display:flex;
+                flex-wrap:wrap;
+                gap:10px;
+                justify-content:center;
+            "
+        >
+
+            <a
+                href="https://wa.me/233597131974?text=Hello%20Yellow%20Cicy%2C%20I%20need%20help."
+                target="_blank"
+                rel="noopener"
+                style="
+                    display:inline-block;
+                    padding:10px 16px;
+                    background:#25D366;
+                    color:white;
+                    border-radius:7px;
+                    text-decoration:none;
+                    font-weight:bold;
+                    font-size:14px;
+                "
+            >
+                💬 WhatsApp Support
+            </a>
+
+
+            <button
+                type="button"
+                id="support-call-btn"
+                style="
+                    padding:10px 16px;
+                    background:#111;
+                    color:white;
+                    border:none;
+                    border-radius:7px;
+                    font-weight:bold;
+                    cursor:pointer;
+                    font-size:14px;
+                "
+            >
+                📞 Call Support
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <p>
+        © 2026 Yellow Cicy. All rights reserved.
+    </p>
+
+
+    <p>
+
+        <a href="account.html">
+            My Account
+        </a>
+
+        &nbsp; | &nbsp;
+
+        <a href="wishlist.html">
+            Wishlist
+        </a>
+
+        &nbsp; | &nbsp;
+
+        <a href="cart.html">
+            Cart
+        </a>
+
+        &nbsp; | &nbsp;
+
+        <a href="#help-support">
+            Help & Support
+        </a>
+
+    </p>
+
+</footer>
+
+
+<!-- =====================================================
+     CUSTOMER WELCOME MESSAGE
+===================================================== -->
+
+<div
+    id="welcome-modal"
+    style="
+        display:none;
+        position:fixed;
+        inset:0;
+        background:rgba(0,0,0,0.65);
+        z-index:99999;
+        align-items:center;
+        justify-content:center;
+        padding:20px;
+        box-sizing:border-box;
+    "
+>
+
+    <div
+        style="
+            width:100%;
+            max-width:420px;
+            background:white;
+            border-radius:15px;
+            padding:25px;
+            text-align:center;
+            box-sizing:border-box;
+            box-shadow:0 10px 30px rgba(0,0,0,0.25);
+        "
+    >
+
+        <div
+            style="
+                font-size:45px;
+                margin-bottom:10px;
+            "
+        >
+            👋
+        </div>
+
+
+        <h2
+            style="
+                margin:0 0 10px;
+            "
+        >
+            Welcome to Yellow Cicy!
+        </h2>
+
+
+        <p
+            style="
+                color:#666;
+                line-height:1.6;
+                margin:0 0 20px;
+            "
+        >
+            Shop electronics, fashion,
+            furniture and more.
+            <br>
+            🇬🇭 Proudly serving customers
+            across Ghana.
+        </p>
+
+
+        <button
+            type="button"
+            id="welcome-continue-btn"
+            style="
+                width:100%;
+                padding:13px;
+                border:none;
+                border-radius:8px;
+                background:#FFD700;
+                color:#111;
+                font-weight:bold;
+                font-size:16px;
+                cursor:pointer;
+            "
+        >
+            Continue Shopping
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     WELCOME MESSAGE JAVASCRIPT
+===================================================== -->
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        const welcomeModal =
+            document.getElementById(
+                "welcome-modal"
+            );
+
+
+        const continueButton =
+            document.getElementById(
+                "welcome-continue-btn"
+            );
+
+
+        if (!welcomeModal) {
+            return;
+        }
+
+
+        const hasWelcomed =
+            localStorage.getItem(
+                "yellowCicyWelcomed"
+            );
+
+
+        if (!hasWelcomed) {
+
+            welcomeModal.style.display =
+                "flex";
+
+        }
+
+
+        if (continueButton) {
+
+            continueButton.addEventListener(
+                "click",
+                function () {
+
+                    welcomeModal.style.display =
+                        "none";
+
+
+                    localStorage.setItem(
+                        "yellowCicyWelcomed",
+                        "true"
+                    );
+
+                }
+            );
+
+        }
+
+    }
+);
+
+</script>
+
+
+<!-- =====================================================
+     WHATSAPP CHAT BUTTON
+===================================================== -->
+
+<a
+    href="https://wa.me/233597131974?text=Hello%20Yellow%20Cicy%2C%20I%20need%20help."
+    target="_blank"
+    rel="noopener"
+    aria-label="Chat with Yellow Cicy on WhatsApp"
+    title="Chat with Yellow Cicy"
+    style="
+        position:fixed;
+        right:20px;
+        bottom:20px;
+        width:58px;
+        height:58px;
+        background:#25D366;
+        color:white;
+        border-radius:50%;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        text-decoration:none;
+        font-size:30px;
+        z-index:99998;
+        box-shadow:0 4px 12px rgba(0,0,0,0.25);
+    "
+>
+    💬
+</a>
+
+
+<!-- =====================================================
+     CALL TO ORDER BUTTON
+===================================================== -->
+
+<button
+    type="button"
+    id="call-order-btn"
+    aria-label="Call Yellow Cicy"
+    title="Call Yellow Cicy"
+    style="
+        position:fixed;
+        right:20px;
+        bottom:90px;
+        width:58px;
+        height:58px;
+        background:#111;
+        color:white;
+        border:none;
+        border-radius:50%;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        font-size:28px;
+        z-index:99998;
+        box-shadow:0 4px 12px rgba(0,0,0,0.25);
+        cursor:pointer;
+    "
+>
+    📞
+</button>
+
+
+<!-- =====================================================
+     CALL TO ORDER POPUP
+===================================================== -->
+
+<div
+    id="call-modal"
+    style="
+        display:none;
+        position:fixed;
+        inset:0;
+        background:rgba(0,0,0,0.65);
+        z-index:99999;
+        align-items:center;
+        justify-content:center;
+        padding:20px;
+        box-sizing:border-box;
+    "
+>
+
+    <div
+        style="
+            width:100%;
+            max-width:380px;
+            background:white;
+            border-radius:15px;
+            padding:25px;
+            text-align:center;
+            box-sizing:border-box;
+            box-shadow:0 10px 30px rgba(0,0,0,0.25);
+        "
+    >
+
+        <div
+            style="
+                font-size:40px;
+                margin-bottom:10px;
+            "
+        >
+            📞
+        </div>
+
+
+        <h2>
+            Call Yellow Cicy
+        </h2>
+
+
+        <p>
+            Need help or want to order by phone?
+        </p>
+
+
+        <a
+            href="tel:0597131974"
+            style="
+                display:block;
+                padding:13px;
+                background:#FFD700;
+                color:#111;
+                border-radius:8px;
+                text-decoration:none;
+                font-weight:bold;
+                margin-bottom:10px;
+            "
+        >
+            📞 Call 0597131974
+        </a>
+
+
+        <button
+            type="button"
+            id="close-call-modal"
+            style="
+                width:100%;
+                padding:12px;
+                border:none;
+                border-radius:8px;
+                background:#eee;
+                color:#111;
+                font-weight:bold;
+                cursor:pointer;
+            "
+        >
+            Close
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     CALL POPUP JAVASCRIPT
+===================================================== -->
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        const callButton =
+            document.getElementById(
+                "call-order-btn"
+            );
+
+
+        const supportCallButton =
+            document.getElementById(
+                "support-call-btn"
+            );
+
+
+        const callModal =
+            document.getElementById(
+                "call-modal"
+            );
+
+
+        const closeButton =
+            document.getElementById(
+                "close-call-modal"
+            );
+
+
+        if (callButton && callModal) {
+
+            callButton.addEventListener(
+                "click",
+                function () {
+
+                    callModal.style.display =
+                        "flex";
+
+                }
+            );
+
+        }
+
+
+        if (
+            supportCallButton &&
+            callModal
+        ) {
+
+            supportCallButton.addEventListener(
+                "click",
+                function () {
+
+                    callModal.style.display =
+                        "flex";
+
+                }
+            );
+
+        }
+
+
+        if (closeButton && callModal) {
+
+            closeButton.addEventListener(
+                "click",
+                function () {
+
+                    callModal.style.display =
+                        "none";
+
+                }
+            );
+
+        }
+
+
+        if (callModal) {
+
+            callModal.addEventListener(
+                "click",
+                function (event) {
+
+                    if (
+                        event.target ===
+                        callModal
+                    ) {
+
+                        callModal.style.display =
+                            "none";
+
+                    }
+
+                }
+            );
+
+        }
+
+    }
+);
+
+</script>
+
+
+<!-- =========================
+     STORE JAVASCRIPT
+========================= -->
+
+<script
+    type="module"
+    src="js/store.js"
+></script>
+
+
+</body>
+
+</html>

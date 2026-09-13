@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>Product Details - Yellow Cicy</title>
+
+<link
+    rel="stylesheet"
+    href="css/style.css"
+>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+     ===================================================== -->
+
+<header>
+
+    <div class="container">
+
+        <div class="logo">
+
+            <a href="index.html">
+
+                <img
+                    src="images/logo.png"
+                    alt="Yellow Cicy"
+                >
+
+            </a>
+
+            <h1>Yellow Cicy</h1>
+
+        </div>
+
+
+        <div class="header-actions">
+
+            <a
+                href="wishlist.html"
+                title="Wishlist"
+            >
+                ❤️
+            </a>
+
+            <a
+                href="cart.html"
+                title="Cart"
+            >
+                🛒
+            </a>
+
+            <a
+                href="account.html"
+                title="Account"
+            >
+                👤
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     NAVIGATION
+     ===================================================== -->
+
+<nav>
+
+    <ul>
+
+        <li>
+            <a href="index.html">
+                Home
+            </a>
+        </li>
+
+        <li>
+            <a href="index.html#products">
+                Shop
+            </a>
+        </li>
+
+        <li>
+            <a href="categories.html">
+                Categories
+            </a>
+        </li>
+
+        <li>
+            <a href="wishlist.html">
+                Wishlist
+            </a>
+        </li>
+
+        <li>
+            <a href="cart.html">
+                Cart
+            </a>
+        </li>
+
+        <li>
+            <a href="account.html">
+                Account
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+
+<!-- =====================================================
+     BREADCRUMB
+     ===================================================== -->
+
+<div class="container">
+
+    <div class="product-breadcrumb">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <span>›</span>
+
+        <span>
+            Product Details
+        </span>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     PRODUCT DETAILS
+     ===================================================== -->
+
+<main class="container product-details-container">
+
+    <div id="product-details">
+
+        <div class="product-loading">
+
+            <div class="loading-spinner">
+                ⏳
+            </div>
+
+            <h2>
+                Loading product...
+            </h2>
+
+            <p>
+                Please wait while we load the product details.
+            </p>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+
+<!-- =====================================================
+     HELP & SUPPORT
+     ===================================================== -->
+
+<section class="support-section">
+
+    <div class="container">
+
+        <h2>
+            💬 Need Help?
+        </h2>
+
+        <p>
+            Our support team is ready to help you.
+        </p>
+
+
+        <div class="support-actions">
+
+            <a
+                href="https://wa.me/233597131974?text=Hello%20Yellow%20Cicy%2C%20I%20need%20help."
+                target="_blank"
+                class="support-whatsapp"
+            >
+                💬 WhatsApp Support
+            </a>
+
+
+            <button
+                type="button"
+                id="support-call-btn"
+                class="support-call"
+            >
+                📞 Call Us
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
+
+<footer>
+
+    <div class="container">
+
+        <p>
+            © 2026 Yellow Cicy.
+            All rights reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     FLOATING WHATSAPP
+     ===================================================== -->
+
+<a
+    href="https://wa.me/233597131974?text=Hello%20Yellow%20Cicy%2C%20I%20need%20help."
+    target="_blank"
+    class="floating-whatsapp"
+    aria-label="WhatsApp Yellow Cicy"
+>
+    💬
+</a>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+     ===================================================== -->
+
+<script type="module" src="js/product.js"></script>
+
+
+<script>
+
+const supportCallButton =
+    document.getElementById(
+        "support-call-btn"
+    );
+
+
+if (supportCallButton) {
+
+    supportCallButton.addEventListener(
+        "click",
+        function() {
+
+            window.location.href =
+                "tel:+233597131974";
+
+        }
+    );
+
+}
+
+</script>
+
+
+</body>
+
+</html>

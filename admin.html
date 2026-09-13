@@ -1,0 +1,403 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>Yellow Cicy Admin</title>
+
+<link
+    rel="stylesheet"
+    href="css/style.css"
+>
+
+</head><body><header><div class="container">
+
+    <div class="logo">
+
+        <img
+            src="images/logo.png"
+            alt="Yellow Cicy"
+        >
+
+        <h1>
+            Yellow Cicy
+        </h1>
+
+    </div>
+
+</div>
+
+</header><nav><ul>
+
+    <li>
+        <a href="index.html">
+            Home
+        </a>
+    </li>
+
+    <li>
+        <a href="admin.html">
+            Products
+        </a>
+    </li>
+
+    <li>
+        <a href="orders.html">
+            Orders
+        </a>
+    </li>
+
+    <li>
+        <a href="pickup.html">
+            Pickup
+        </a>
+    </li>
+
+    <li>
+        <a href="account.html">
+            Account
+        </a>
+    </li>
+
+</ul>
+
+</nav><main class="admin"><h1>
+    Admin Dashboard
+</h1>
+
+
+<!-- ========================================= -->
+<!-- ADD PRODUCT -->
+<!-- ========================================= -->
+
+<section>
+
+    <h2>
+        Add Product
+    </h2>
+
+
+    <!-- PRODUCT NAME -->
+
+    <input
+        type="text"
+        id="name"
+        placeholder="Product Name"
+    >
+
+
+    <!-- DESCRIPTION -->
+
+    <textarea
+        id="description"
+        placeholder="Product Description"
+        rows="5"
+    ></textarea>
+
+
+    <!-- CATEGORY -->
+
+    <select id="category">
+
+        <option value="">
+            Select Category
+        </option>
+
+        <option value="Electronics">
+            Electronics
+        </option>
+
+        <option value="Health & Beauty">
+            Health & Beauty
+        </option>
+
+        <option value="Home & Office">
+            Home & Office
+        </option>
+
+        <option value="Computing">
+            Computing
+        </option>
+
+        <option value="Baby Products">
+            Baby Products
+        </option>
+
+        <option value="Fashion">
+            Fashion
+        </option>
+
+        <option value="Gaming">
+            Gaming
+        </option>
+
+        <option value="Musical Instruments">
+            Musical Instruments
+        </option>
+
+        <option value="Sporting Goods">
+            Sporting Goods
+        </option>
+
+        <option value="Furniture">
+            Furniture
+        </option>
+
+        <option value="Phones">
+            Phones
+        </option>
+
+        <option value="Accessories">
+            Accessories
+        </option>
+
+        <option value="Watches">
+            Watches
+        </option>
+
+        <option value="Other">
+            Other
+        </option>
+
+    </select>
+
+
+    <!-- REGULAR PRICE -->
+
+    <input
+        type="number"
+        id="price"
+        placeholder="Regular Price in GHS"
+        min="0"
+        step="0.01"
+    >
+
+
+    <!-- DISCOUNT PRICE -->
+
+    <input
+        type="number"
+        id="discountPrice"
+        placeholder="Discount Price in GHS (optional)"
+        min="0"
+        step="0.01"
+    >
+
+
+    <!-- STOCK -->
+
+    <input
+        type="number"
+        id="stock"
+        placeholder="Stock Quantity"
+        min="0"
+        step="1"
+    >
+
+
+    <!-- SIZES -->
+
+    <input
+        type="text"
+        id="sizes"
+        placeholder="Sizes (e.g. S, M, L, XL)"
+    >
+
+
+    <!-- COLORS -->
+
+    <input
+        type="text"
+        id="colors"
+        placeholder="Colors (e.g. Black, White, Red)"
+    >
+
+
+    <!-- MULTIPLE PRODUCT PHOTOS -->
+
+    <label
+        for="images"
+        style="
+            display:block;
+            margin-top:15px;
+            margin-bottom:5px;
+            font-weight:bold;
+        "
+    >
+        Product Photos
+    </label>
+
+    <input
+        type="file"
+        id="images"
+        accept="image/*"
+        multiple
+    >
+
+
+    <!-- IMAGE PREVIEW -->
+
+    <div
+        id="image-preview"
+        style="
+            display:flex;
+            flex-wrap:wrap;
+            gap:10px;
+            margin:15px 0;
+        "
+    ></div>
+
+
+    <!-- NEW ARRIVAL -->
+
+    <label
+        style="
+            display:block;
+            margin:15px 0 8px;
+        "
+    >
+
+        <input
+            type="checkbox"
+            id="newArrival"
+        >
+
+        🆕 Mark as New Arrival
+
+    </label>
+
+
+    <!-- FLASH SALE -->
+
+    <label
+        style="
+            display:block;
+            margin:10px 0 8px;
+        "
+    >
+
+        <input
+            type="checkbox"
+            id="flashSale"
+        >
+
+        ⚡ Mark as Flash Sale
+
+    </label>
+
+
+    <!-- FLASH SALE START -->
+
+    <label
+        for="flashStart"
+        style="
+            display:block;
+            margin-top:10px;
+            margin-bottom:5px;
+        "
+    >
+        Flash Sale Start
+    </label>
+
+    <input
+        type="datetime-local"
+        id="flashStart"
+    >
+
+
+    <!-- FLASH SALE END -->
+
+    <label
+        for="flashEnd"
+        style="
+            display:block;
+            margin-top:10px;
+            margin-bottom:5px;
+        "
+    >
+        Flash Sale End
+    </label>
+
+    <input
+        type="datetime-local"
+        id="flashEnd"
+    >
+
+
+    <!-- ADD BUTTON -->
+
+    <button id="add-btn">
+        Add Product
+    </button>
+
+</section>
+
+
+<!-- ========================================= -->
+<!-- PRODUCTS -->
+<!-- ========================================= -->
+
+<section>
+
+    <h2>
+        Products
+    </h2>
+
+
+    <div class="table-wrapper">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>
+                        Image
+                    </th>
+
+                    <th>
+                        Name
+                    </th>
+
+                    <th>
+                        Category
+                    </th>
+
+                    <th>
+                        Price
+                    </th>
+
+                    <th>
+                        Delete
+                    </th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody id="product-list">
+
+                <tr>
+
+                    <td colspan="5">
+                        Loading products...
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+</main><script
+    type="module"
+    src="js/admin.js"
+></script></body></html>

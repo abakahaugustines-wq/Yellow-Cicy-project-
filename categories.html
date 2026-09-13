@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>Yellow Cicy - Categories</title>
+
+<link
+    rel="stylesheet"
+    href="css/style.css"
+>
+
+<style>
+
+/* =====================================================
+   CATEGORIES PAGE
+   ===================================================== */
+
+.categories-page {
+
+    padding:20px;
+
+    max-width:1000px;
+
+    margin:auto;
+
+}
+
+
+/* =====================================================
+   CATEGORY PAGE HEADER
+   ===================================================== */
+
+.categories-header {
+
+    background:#FFD700;
+
+    padding:15px;
+
+    text-align:center;
+
+    border-radius:0 0 12px 12px;
+
+}
+
+
+.categories-page-logo {
+
+    width:90px !important;
+
+    height:90px !important;
+
+    object-fit:contain;
+
+    display:block;
+
+    margin:0 auto 10px;
+
+}
+
+
+.categories-header a {
+
+    text-decoration:none;
+
+    color:#111;
+
+}
+
+
+.categories-header-title {
+
+    font-size:20px;
+
+    font-weight:bold;
+
+}
+
+
+/* =====================================================
+   TITLE
+   ===================================================== */
+
+.categories-page h1 {
+
+    text-align:center;
+
+    margin-top:25px;
+
+    margin-bottom:10px;
+
+}
+
+
+.categories-page-intro {
+
+    text-align:center;
+
+    color:#666;
+
+    margin-bottom:25px;
+
+}
+
+
+/* =====================================================
+   CATEGORY GRID
+   ===================================================== */
+
+.categories-grid {
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(
+                140px,
+                1fr
+            )
+        );
+
+    gap:15px;
+
+}
+
+
+/* =====================================================
+   CATEGORY CARD
+   ===================================================== */
+
+.category-card {
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-height:130px;
+
+    padding:20px;
+
+    background:white;
+
+    border:1px solid #ddd;
+
+    border-radius:12px;
+
+    text-decoration:none;
+
+    color:#222;
+
+    box-sizing:border-box;
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+
+}
+
+
+.category-card:hover {
+
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 5px 15px
+        rgba(0,0,0,0.12);
+
+}
+
+
+.category-card:active {
+
+    transform:scale(0.97);
+
+}
+
+
+/* =====================================================
+   CATEGORY ICON
+   ===================================================== */
+
+.category-icon {
+
+    font-size:40px;
+
+    line-height:1;
+
+    margin-bottom:12px;
+
+}
+
+
+/* =====================================================
+   CATEGORY NAME
+   ===================================================== */
+
+.category-name {
+
+    font-weight:bold;
+
+    text-align:center;
+
+    font-size:15px;
+
+}
+
+
+/* =====================================================
+   BACK BUTTON
+   ===================================================== */
+
+.back-home {
+
+    display:block;
+
+    width:max-content;
+
+    margin:
+        25px auto
+        10px;
+
+    padding:
+        10px 18px;
+
+    background:#FFD700;
+
+    color:#111;
+
+    text-decoration:none;
+
+    border-radius:7px;
+
+    font-weight:bold;
+
+}
+
+
+.back-home:active {
+
+    transform:scale(0.97);
+
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width:600px) {
+
+    .categories-page {
+
+        padding:15px;
+
+    }
+
+
+    .categories-grid {
+
+        grid-template-columns:
+            repeat(
+                2,
+                1fr
+            );
+
+        gap:12px;
+
+    }
+
+
+    .category-card {
+
+        min-height:120px;
+
+        padding:15px;
+
+    }
+
+
+    .category-icon {
+
+        font-size:34px;
+
+    }
+
+
+    .category-name {
+
+        font-size:14px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     CATEGORY PAGE HEADER
+     ===================================================== -->
+
+<header class="categories-header">
+
+    <a href="index.html">
+
+        <img
+            src="images/logo.png"
+            alt="Yellow Cicy"
+            class="categories-page-logo"
+        >
+
+        <div class="categories-header-title">
+            Yellow Cicy
+        </div>
+
+    </a>
+
+</header>
+
+
+<!-- =====================================================
+     MAIN CONTENT
+     ===================================================== -->
+
+<main class="categories-page">
+
+
+    <h1>
+        Shop by Category
+    </h1>
+
+
+    <p class="categories-page-intro">
+        Choose a category to find
+        what you are looking for.
+    </p>
+
+
+    <div class="categories-grid">
+
+
+        <!-- ELECTRONICS -->
+
+        <a
+            href="index.html?category=Electronics"
+            class="category-card"
+        >
+
+            <span class="category-icon">
+                📱
+            </span>
+
+            <span class="category-name">
+                Electronics
+            </span>
+
+        </a>
+
+
+        <!-- FURNITURE -->
+
+        <a
+            href="index.html?category=Furniture"
+            class="category-card"
+        >
+
+            <span class="category-icon">
+                🛋️
+            </span>
+
+            <span class="category-name">
+                Furniture
+            </span>
+
+        </a>
+
+
+        <!-- PHONES -->
+
+        <a
+            href="index.html?category=Phones"
+            class="category-card"
+        >
+
+            <span class="category-icon">
+                📞
+            </span>
+
+            <span class="category-name">
+                Phones
+            </span>
+
+        </a>
+
+
+        <!-- ACCESSORIES -->
+
+        <a
+            href="index.html?category=Accessories"
+            class="category-card"
+        >
+
+            <span class="category-icon">
+                🎧
+            </span>
+
+            <span class="category-name">
+                Accessories
+            </span>
+
+        </a>
+
+
+        <!-- WATCHES -->
+
+        <a
+            href="index.html?category=Watches"
+            class="category-card"
+        >
+
+            <span class="category-icon">
+                ⌚
+            </span>
+
+            <span class="category-name">
+                Watches
+            </span>
+
+        </a>
+
+
+        <!-- HEALTH & BEAUTY -->
+
+        <a
+            href="index.html?category=Health%20%26%20Beauty"
+            class="category-card"
+        >
+
+            <span class="category-icon">
+                💄
+            </span>
+
+            <span class="category-name">
+                Health & Beauty
+            </span>
+
+        </a>
+
+
+        <!-- HOME & OFFICE -->
+
+        <a
+            href="index.html?category=Home%20%26%20Office"
+            class="category-card"
+        >
+
+            <span class="category-icon">
+                🏠
+            </span>
+
+            <span class="category-name">
+                Home & Office
+            </span>
+
+        </a>
+
+
+        <!-- COMPUTING -->
+
+        <a
+            href="index.html?category=Computing"
+            class="category-card"
+        >
+
+            <span class="category-icon">
+                💻
+            </span>
+
+            <span class="category-name">
+                Computing
+            </span>
+
+        </a>
+
+
+        <!-- BABY PRODUCTS -->
+
+        <a
+            href="index.html?category=Baby%20Products"
+            class="category-card"
+        >
+
+            <span class="category-icon">
+                👶
+            </span>
+
+            <span class="category-name">
+                Baby Products
+            </span>
+
+        </a>
+
+
+        <!-- FASHION -->
+
+        <a
+            href="index.html?category=Fashion"
+            class="category-card"
+        >
+
+            <span class="category-icon">
+                👗
+            </span>
+
+            <span class="category-name">
+                Fashion
+            </span>
+
+        </a>
+
+
+        <!-- GAMING -->
+
+        <a
+            href="index.html?category=Gaming"
+            class="category-card"
+        >
+
+            <span class="category-icon">
+                🎮
+            </span>
+
+            <span class="category-name">
+                Gaming
+            </span>
+
+        </a>
+
+
+        <!-- MUSICAL INSTRUMENTS -->
+
+        <a
+            href="index.html?category=Musical%20Instruments"
+            class="category-card"
+        >
+
+            <span class="category-icon">
+                🎸
+            </span>
+
+            <span class="category-name">
+                Musical Instruments
+            </span>
+
+        </a>
+
+
+        <!-- SPORTING GOODS -->
+
+        <a
+            href="index.html?category=Sporting%20Goods"
+            class="category-card"
+        >
+
+            <span class="category-icon">
+                ⚽
+            </span>
+
+            <span class="category-name">
+                Sporting Goods
+            </span>
+
+        </a>
+
+
+        <!-- OTHER -->
+
+        <a
+            href="index.html?category=Other"
+            class="category-card"
+        >
+
+            <span class="category-icon">
+                📦
+            </span>
+
+            <span class="category-name">
+                Other
+            </span>
+
+        </a>
+
+
+    </div>
+
+
+    <!-- BACK TO HOME -->
+
+    <a
+        href="index.html"
+        class="back-home"
+    >
+        ← Back to Home
+    </a>
+
+
+</main>
+
+
+</body>
+
+</html>

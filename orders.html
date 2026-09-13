@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Orders - Yellow Cicy</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+    <div class="container">
+
+        <div class="logo">
+
+            <a href="index.html">
+
+                <img
+                    src="images/logo.png"
+                    alt="Yellow Cicy"
+                >
+
+            </a>
+
+            <h1>
+                Yellow Cicy Orders
+            </h1>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+
+    <ul>
+
+        <li>
+            <a href="index.html">
+                Home
+            </a>
+        </li>
+
+        <li>
+            <a href="admin.html">
+                Products
+            </a>
+        </li>
+
+        <li>
+            <a href="orders.html">
+                Orders
+            </a>
+        </li>
+
+        <li>
+            <a href="pickup.html">
+                Pickup
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+<!-- =========================
+     ORDERS
+========================= -->
+
+<main class="admin">
+
+    <h1>
+        Customer Orders
+    </h1>
+
+
+    <div class="table-wrapper">
+
+        <table class="orders-table">
+
+            <thead>
+
+                <tr>
+
+                    <th>
+                        Reference
+                    </th>
+
+                    <th>
+                        Total (GHS)
+                    </th>
+
+                    <th>
+                        Status
+                    </th>
+
+                    <th>
+                        Date
+                    </th>
+
+                    <th>
+                        Details
+                    </th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody id="orders-list">
+
+                <tr>
+
+                    <td colspan="5">
+                        Loading orders...
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</main>
+
+
+<!-- =========================
+     ORDER DETAILS MODAL
+========================= -->
+
+<div
+    id="order-modal"
+    style="
+        display:none;
+        position:fixed;
+        inset:0;
+        background:rgba(0,0,0,0.65);
+        z-index:9999;
+        padding:20px;
+        overflow-y:auto;
+    "
+>
+
+    <div
+        style="
+            max-width:550px;
+            margin:40px auto;
+            background:white;
+            border-radius:14px;
+            padding:25px;
+            position:relative;
+            box-shadow:0 10px 30px rgba(0,0,0,0.3);
+        "
+    >
+
+        <!-- CLOSE BUTTON -->
+
+        <button
+            id="close-order-modal"
+            type="button"
+            style="
+                position:absolute;
+                top:12px;
+                right:12px;
+                width:40px;
+                height:40px;
+                border:none;
+                border-radius:50%;
+                background:#222;
+                color:white;
+                font-size:22px;
+                cursor:pointer;
+            "
+        >
+            ×
+        </button>
+
+
+        <h2
+            style="
+                margin-bottom:20px;
+                padding-right:45px;
+            "
+        >
+            Order Details
+        </h2>
+
+
+        <!-- DETAILS -->
+
+        <div id="order-details">
+
+            Loading...
+
+        </div>
+        <!-- CUSTOMER CANCELLATION -->
+<div
+    id="cancel-order-actions"
+    style="
+        display:none;
+        margin-top:20px;
+        padding-top:20px;
+        border-top:1px solid #ddd;
+    "
+>
+
+    <button
+        id="cancel-order-btn"
+        type="button"
+        style="
+            width:100%;
+            padding:14px;
+            border:none;
+            border-radius:8px;
+            background:#dc3545;
+            color:white;
+            font-size:16px;
+            font-weight:bold;
+            cursor:pointer;
+        "
+    >
+        ❌ Cancel Order
+    </button>
+
+    <p
+        id="cancel-order-message"
+        style="
+            margin-top:10px;
+            text-align:center;
+            font-weight:bold;
+        "
+    ></p>
+
+</div>
+        <!-- =========================
+     ORDER STATUS CONTROL
+========================= -->
+
+<div
+    id="status-actions"
+    style="
+        display:none;
+        margin-top:25px;
+        padding-top:20px;
+        border-top:1px solid #ddd;
+    "
+>
+
+    <h3>
+        Order Status
+    </h3>
+
+    <select
+        id="order-status"
+        style="
+            width:100%;
+            padding:13px;
+            border:1px solid #ccc;
+            border-radius:8px;
+            font-size:16px;
+            background:white;
+        "
+    >
+
+        <option value="Paid">
+            Paid
+        </option>
+
+        <option value="Processing">
+            Processing
+        </option>
+
+        <option value="Shipped">
+            Shipped
+        </option>
+
+        <option value="At Pickup Station">
+            At Pickup Station
+        </option>
+
+        <option value="Collected">
+            Collected
+        </option>
+
+    </select>
+
+
+    <button
+        id="update-status-btn"
+        type="button"
+        style="
+            width:100%;
+            margin-top:12px;
+            padding:14px;
+            border:none;
+            border-radius:8px;
+            background:#FFD700;
+            color:#111;
+            font-size:16px;
+            font-weight:bold;
+            cursor:pointer;
+        "
+    >
+        Update Order Status
+    </button>
+
+
+    <p
+        id="status-message"
+        style="
+            margin-top:10px;
+            text-align:center;
+            font-weight:bold;
+        "
+    ></p>
+
+</div>
+
+<!-- =========================
+     DELIVERY & PICKUP INFO
+========================= -->
+
+<div
+    id="delivery-pickup-info"
+    style="
+        display:none;
+        margin-top:25px;
+        padding-top:20px;
+        border-top:1px solid #ddd;
+    "
+>
+
+    <h3>
+        🚚 Delivery & Pickup
+    </h3>
+
+
+    <div
+        style="
+            background:#f8f8f8;
+            border-radius:10px;
+            padding:15px;
+            line-height:1.8;
+        "
+    >
+
+        <p id="shipped-date">
+            🚚 Shipped:
+            Not yet shipped
+        </p>
+
+
+        <p id="expected-arrival-date">
+            📅 Expected at pickup station:
+            Not available
+        </p>
+
+
+        <p id="pickup-arrival-date">
+            📍 Arrived at pickup station:
+            Not yet arrived
+        </p>
+
+
+        <p id="pickup-deadline">
+            ⏳ Pickup deadline:
+            Not available
+        </p>
+
+    </div>
+
+</div>
+        <!-- INVOICE ACTIONS -->
+
+        <div
+            id="invoice-actions"
+            style="
+                display:none;
+                margin-top:25px;
+                padding-top:20px;
+                border-top:1px solid #ddd;
+                text-align:center;
+            "
+        >
+
+            <button
+                id="invoice-btn"
+                type="button"
+                style="
+                    width:100%;
+                    padding:14px;
+                    border:none;
+                    border-radius:8px;
+                    background:#FFD700;
+                    color:#111;
+                    font-size:16px;
+                    font-weight:bold;
+                    cursor:pointer;
+                "
+            >
+                🧾 View / Print Invoice
+            </button>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     ORDERS JAVASCRIPT
+========================= -->
+
+<script
+    type="module"
+    src="js/orders.js"
+></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Yellow Cicy Pickup</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+    <div class="container">
+
+        <div class="logo">
+
+            <a href="index.html">
+
+                <img
+                    src="images/logo.png"
+                    alt="Yellow Cicy"
+                >
+
+            </a>
+
+            <h1>
+                Yellow Cicy Pickup
+            </h1>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+
+    <ul>
+
+        <li>
+            <a href="index.html">
+                Home
+            </a>
+        </li>
+
+        <li>
+            <a href="admin.html">
+                Products
+            </a>
+        </li>
+
+        <li>
+            <a href="orders.html">
+                Orders
+            </a>
+        </li>
+
+        <li>
+            <a href="pickup.html">
+                Pickup
+            </a>
+        </li>
+
+        <li>
+            <a href="account.html">
+                Account
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+<!-- =========================
+     MAIN PICKUP SYSTEM
+========================= -->
+
+<main class="admin">
+
+
+    <!-- =========================
+         CUSTOMER ORDER SEARCH
+    ========================= -->
+
+    <section>
+
+        <h1>
+            Customer Order Pickup
+        </h1>
+
+
+        <p
+            style="
+                text-align:center;
+                margin-bottom:25px;
+                color:#666;
+                line-height:1.5;
+            "
+        >
+
+            Enter the customer's order number
+            to find the correct order and products.
+
+        </p>
+
+
+        <!-- ORDER NUMBER -->
+
+        <div
+            style="
+                max-width:600px;
+                margin:0 auto 30px;
+            "
+        >
+
+            <label
+                for="order-number"
+                style="
+                    display:block;
+                    font-weight:bold;
+                    margin-bottom:8px;
+                "
+            >
+
+                Order Number
+
+            </label>
+
+
+            <input
+                type="text"
+                id="order-number"
+                placeholder="Enter order number"
+                autocomplete="off"
+            >
+
+
+            <button
+                type="button"
+                id="search-order-btn"
+                style="
+                    width:100%;
+                    padding:14px;
+                    margin-top:10px;
+                    background:#FFD700;
+                    color:#222;
+                    border:none;
+                    border-radius:8px;
+                    font-size:17px;
+                    font-weight:bold;
+                    cursor:pointer;
+                "
+            >
+
+                🔍 Search Order
+
+            </button>
+
+        </div>
+
+
+        <!-- SEARCH RESULT -->
+
+        <div id="pickup-result">
+
+            <div
+                style="
+                    background:#f8f8f8;
+                    padding:20px;
+                    border-radius:10px;
+                    text-align:center;
+                    color:#666;
+                "
+            >
+
+                Enter an order number above.
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         DIVIDER
+    ========================= -->
+
+    <hr
+        style="
+            margin:45px 0;
+            border:none;
+            border-top:1px solid #ddd;
+        "
+    >
+
+
+    <!-- =========================
+         PICKUP STATION MANAGEMENT
+    ========================= -->
+
+    <section>
+
+        <h1>
+            Pickup Station Management
+        </h1>
+
+
+        <p
+            style="
+                text-align:center;
+                color:#666;
+                margin-bottom:30px;
+                line-height:1.5;
+            "
+        >
+
+            Add and manage the exact locations where customers
+            can pick up their orders.
+
+        </p>
+
+
+        <!-- =========================
+             REGION
+        ========================= -->
+
+        <label
+            for="pickup-region"
+            style="
+                display:block;
+                margin-bottom:8px;
+                font-weight:bold;
+            "
+        >
+
+            Region
+
+        </label>
+
+
+        <select
+            id="pickup-region"
+            required
+            style="
+                width:100%;
+                padding:12px;
+                margin-bottom:15px;
+                border:1px solid #ccc;
+                border-radius:8px;
+                font-size:16px;
+                background:white;
+            "
+        >
+
+            <option value="">
+                Select Region
+            </option>
+
+            <option value="Greater Accra">
+                Greater Accra
+            </option>
+
+            <option value="Ashanti">
+                Ashanti
+            </option>
+
+            <option value="Ahafo">
+                Ahafo
+            </option>
+
+            <option value="Bono">
+                Bono
+            </option>
+
+            <option value="Bono East">
+                Bono East
+            </option>
+
+            <option value="Central">
+                Central
+            </option>
+
+            <option value="Eastern">
+                Eastern
+            </option>
+
+            <option value="North East">
+                North East
+            </option>
+
+            <option value="Northern">
+                Northern
+            </option>
+
+            <option value="Oti">
+                Oti
+            </option>
+
+            <option value="Savannah">
+                Savannah
+            </option>
+
+            <option value="Upper East">
+                Upper East
+            </option>
+
+            <option value="Upper West">
+                Upper West
+            </option>
+
+            <option value="Volta">
+                Volta
+            </option>
+
+            <option value="Western">
+                Western
+            </option>
+
+            <option value="Western North">
+                Western North
+            </option>
+
+        </select>
+
+
+        <!-- =========================
+             CITY / TOWN
+        ========================= -->
+
+        <label
+            for="pickup-city"
+            style="
+                display:block;
+                margin-bottom:8px;
+                font-weight:bold;
+            "
+        >
+
+            City / Town
+
+        </label>
+
+
+        <input
+            type="text"
+            id="pickup-city"
+            placeholder="e.g. Accra"
+            required
+        >
+
+
+        <!-- =========================
+             BRANCH NAME
+        ========================= -->
+
+        <label
+            for="pickup-branch"
+            style="
+                display:block;
+                margin-top:15px;
+                margin-bottom:8px;
+                font-weight:bold;
+            "
+        >
+
+            Branch Name
+
+        </label>
+
+
+        <input
+            type="text"
+            id="pickup-branch"
+            placeholder="e.g. Accra Central Branch"
+            required
+        >
+
+
+        <!-- =========================
+             EXACT PICKUP POINT
+        ========================= -->
+
+        <label
+            for="pickup-point"
+            style="
+                display:block;
+                margin-top:15px;
+                margin-bottom:8px;
+                font-weight:bold;
+            "
+        >
+
+            Exact Pickup Point
+
+        </label>
+
+
+        <input
+            type="text"
+            id="pickup-point"
+            placeholder="e.g. Circle Station"
+            required
+        >
+
+
+        <!-- =========================
+             FULL ADDRESS
+        ========================= -->
+
+        <label
+            for="pickup-address"
+            style="
+                display:block;
+                margin-top:15px;
+                margin-bottom:8px;
+                font-weight:bold;
+            "
+        >
+
+            Full Address
+
+        </label>
+
+
+        <textarea
+            id="pickup-address"
+            rows="3"
+            placeholder="Enter the exact address of the pickup point"
+            required
+            style="
+                width:100%;
+                padding:12px;
+                border:1px solid #ccc;
+                border-radius:8px;
+                font-size:16px;
+                resize:vertical;
+            "
+        ></textarea>
+
+
+        <!-- =========================
+             ADD STATION BUTTON
+        ========================= -->
+
+        <button
+            id="add-pickup-btn"
+            type="button"
+            style="
+                width:100%;
+                padding:14px;
+                margin-top:20px;
+                background:#FFD700;
+                color:#222;
+                border:none;
+                border-radius:8px;
+                font-size:17px;
+                font-weight:bold;
+                cursor:pointer;
+            "
+        >
+
+            📍 Add Pickup Station
+
+        </button>
+
+    </section>
+
+
+    <!-- =========================
+         STATION LIST
+    ========================= -->
+
+    <section>
+
+        <h2>
+            Available Pickup Stations
+        </h2>
+
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Region
+                        </th>
+
+                        <th>
+                            City / Town
+                        </th>
+
+                        <th>
+                            Branch
+                        </th>
+
+                        <th>
+                            Exact Pickup Point
+                        </th>
+
+                        <th>
+                            Address
+                        </th>
+
+                        <th>
+                            Action
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="pickup-list">
+
+                    <tr>
+
+                        <td colspan="6">
+
+                            Loading pickup stations...
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<!-- =========================
+     PICKUP JAVASCRIPT
+========================= -->
+
+<script
+    type="module"
+    src="js/pickup.js"
+></script>
+
+
+</body>
+
+</html>
